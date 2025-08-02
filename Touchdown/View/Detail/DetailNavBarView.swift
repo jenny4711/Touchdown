@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct DetailNavBarView: View {
+    @EnvironmentObject var shop:Shop
     var body: some View {
         HStack{
-            Button(action: {}) {
+            Button(action: {
+                withAnimation(.easeIn){
+                    feedback.impactOccurred()
+                    shop.selectedProducut = nil
+                    shop.showingProduct = false
+                }
+            }) {
                 Image(systemName: "chevron.left")
                     .font(.title)
                     .foregroundColor(.white)
@@ -23,6 +30,7 @@ struct DetailNavBarView: View {
                 
             }
         }//:HSTACK
+        .padding(.top,20)
         
 
     }
@@ -30,7 +38,7 @@ struct DetailNavBarView: View {
 
 #Preview(traits:.sizeThatFitsLayout)  {
     DetailNavBarView()
-     
+        .environmentObject(Shop())
         .padding()
         .background(Color.gray)
 }

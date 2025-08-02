@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AddToCartDetailView: View {
+    @EnvironmentObject var shop:Shop
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            feedback.impactOccurred()
+        }) {
             Spacer()
             Text("Add to cart".uppercased())
                 .font(.system(.title2,design: .rounded))
@@ -20,9 +23,9 @@ struct AddToCartDetailView: View {
         .padding(15)
         .background(
             Color(
-                red:sampleProduct.red,
-                green: sampleProduct.green,
-                blue: sampleProduct.blue)
+                red:shop.selectedProducut?.red ?? sampleProduct.red,
+                green:shop.selectedProducut?.green ?? sampleProduct.green,
+                blue:shop.selectedProducut?.blue ?? sampleProduct.blue)
         )
         .clipShape(Capsule())
 
@@ -31,5 +34,6 @@ struct AddToCartDetailView: View {
 
 #Preview(traits:.sizeThatFitsLayout) {
     AddToCartDetailView()
+        .environmentObject(Shop())
         .padding()
 }
