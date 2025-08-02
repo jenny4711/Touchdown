@@ -17,9 +17,9 @@ struct FeaturedItemView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     FeaturedItemView(player: players[0])
-        .previewLayout(.sizeThatFits)
+     
         .padding()
         .background(colorBackground)
 }

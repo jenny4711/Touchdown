@@ -23,8 +23,8 @@ struct FeaturedTabView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     FeaturedTabView()
-        .previewDevice("iPhone 12 Pro")
+   
         .background(Color.gray)
 }

@@ -33,9 +33,9 @@ struct LogoView: View {
 
 
  // MARK: - Preview
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     LogoView()
-        .previewLayout(.sizeThatFits)
+    
         .background(colorBackground)
 }
 

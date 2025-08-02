@@ -36,9 +36,9 @@ struct ProductItemView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.fixedLayout(width: 200, height: 300))  {
     ProductItemView(product: products[0])
-        .previewLayout(.fixed(width:200,height:300))
+     
         .padding()
         .background(colorBackground)
     

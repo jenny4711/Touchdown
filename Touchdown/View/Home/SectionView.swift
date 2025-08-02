@@ -26,10 +26,10 @@ struct SectionView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.fixedLayout(width: 120, height: 240))  {
     SectionView(rotateColckwise: true)
     
-        .previewLayout(.fixed(width:120,height:240))
+ 
         .padding()
         .background(colorBackground)
 }

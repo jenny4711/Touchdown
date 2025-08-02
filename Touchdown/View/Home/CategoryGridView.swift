@@ -29,9 +29,9 @@ struct CategoryGridView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     CategoryGridView()
-        .previewLayout(.sizeThatFits)
+      
             .padding()
             .background(colorBackground)
 }

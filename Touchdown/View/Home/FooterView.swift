@@ -31,8 +31,8 @@ struct FooterView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     FooterView()
-        .previewLayout(.sizeThatFits)
+
         .background(colorBackground)
 }

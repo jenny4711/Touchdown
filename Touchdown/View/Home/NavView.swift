@@ -52,8 +52,8 @@ struct NavView: View {
     }
 }
  // MARK: - preview
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     NavView()
-        .previewLayout(.sizeThatFits)
+     
         .background(colorBackground)
 }

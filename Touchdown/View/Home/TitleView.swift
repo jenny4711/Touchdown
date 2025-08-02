@@ -28,8 +28,8 @@ struct TitleView: View {
     }
 }
 
-#Preview {
+#Preview(traits:.sizeThatFitsLayout)  {
     TitleView(title: "Helmet")
-        .previewLayout(.sizeThatFits)
+    
         .background(colorBackground)
 }

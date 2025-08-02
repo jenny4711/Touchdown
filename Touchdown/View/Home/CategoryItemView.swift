@@ -39,8 +39,8 @@ struct CategoryItemView: View {
     }
 }
 
-#Preview {
-    CategoryItemView(category: categories[0] )       .previewLayout(.sizeThatFits)
+#Preview(traits:.sizeThatFitsLayout)  {
+    CategoryItemView(category: categories[0] )
         .padding()
         .background(colorBackground)
 }
